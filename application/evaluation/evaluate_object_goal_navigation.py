@@ -3,6 +3,9 @@ from pathlib import Path
 import numpy as np
 from omegaconf import DictConfig
 import hydra
+import sys
+path='/home/kaikkwoo/research-project/lurp/vlmaps/'
+sys.path.append(path)
 
 from vlmaps.task.habitat_object_nav_task import HabitatObjectNavigationTask
 from vlmaps.robot.habitat_lang_robot import HabitatLanguageRobot
