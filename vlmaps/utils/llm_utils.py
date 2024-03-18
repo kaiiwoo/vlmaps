@@ -22,7 +22,7 @@ def parse_object_goal_instruction(language_instr):
     I: Move to the west of the chair, with the sofa on your right, move to the table, then turn right 90 degree, then find a table. A: chair, table
     I: {language_instr}. A:"""
     response = openai.Completion.create(
-        engine="text-davinci-002",
+        engine="gpt-3.5-turbo-instruct",
         prompt=question,
         max_tokens=64,
         temperature=0.0,
@@ -163,7 +163,7 @@ robot.move_forward(3)
     """
         print("lang: ", lang)
         response = openai.Completion.create(
-            engine="text-davinci-002",
+            engine="gpt-3.5-turbo-instruct",
             prompt=question,
             max_tokens=400,
             temperature=0.0,
