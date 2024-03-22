@@ -21,7 +21,7 @@ def find_similar_category_id(class_name, classes_list):
     Q: What is drawer most relevant to among tv_monitor,chest_of_drawers,chair. A:chest_of_drawers\n
     Q: What is {class_name} most relevant to among {classes_list_str}. A:"""
     response = openai.Completion.create(
-        engine="text-davinci-002",
+        engine="gpt-3.5-turbo-instruct",
         prompt=question,
         max_tokens=64,
         temperature=0.0,
